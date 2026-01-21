@@ -1,0 +1,125 @@
+/* Start of CSS Document */
+
+
+
+/*------------------------ Beginning of General Styling Rules ----------------------------------------*/
+
+/* Top Navigation Bar Styling */
+
+/* Code for an unselected navigation panel */
+.topnav a {
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 5vw;
+    background-color: rgb(134, 173, 224);
+    font-family: helvetica;
+}
+
+/* Code for when the mouse hover over an unselected navigation panel */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Code for the button of the current page */
+.topnav a.active{
+    background-color: steelblue;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* Navigation Bar styling based on (but edited) from the original template from https://www.w3schools.com/howto/howto_js_topnav.asp */
+
+
+
+/* Body Styling */
+
+/* Code for the entire body of the webpage */
+body {
+    background-color:aliceblue;
+    font-family: Helvetica;
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+
+
+/* Header 1 Styling */
+
+/* Code for the largest header(s) of the webpage */
+h1 {
+    text-align: center;
+    font-size: 6vw;
+    font-family: Courier;
+}
+
+
+
+/* Header 2 Styling */
+
+/* Code for the second largest header(s) of the webpage */
+h2{
+    text-align: center;
+    font-size: 3vw;
+    text-decoration: underline;
+}
+
+
+
+/* Ordered List Styling */
+
+/* Code for numbered list(s) of the webpage */
+ol{
+    font-size: 1.5vw;
+}
+
+/*------------------------ End of General Styling Rules ----------------------------------------*/
+
+
+
+
+/*------------------------ Beginning of Home Page Styling Rules ----------------------------------------*/
+
+/* Home Page Picture Styling */
+
+/* Code for the home page picture itself*/
+#andrew-pic{
+    display: block;
+    margin: auto;
+    width: 50%;
+    border-style: dotted;
+    border-color: gray;
+}
+
+/* Code for the home page picture caption*/
+#andrew-pic-description{
+    text-align: left;
+    font-size: 2vw;
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+/*------------------------ End of Home Page Styling Rules ----------------------------------------*/
+
+
+
+/*------------------------ Beginning of Home Page Styling Rules ----------------------------------------*/
+
+/* Project 1 Heading Styling*/
+
+.small{
+    margin-bottom: 1vw;
+    font-size: 4vw;
+}
+
+.large{
+    margin-top : 1vw;
+}
+
+/*------------------------ End of Home Page Styling Rules ----------------------------------------*/
+
+
+
+/* End of CSS Document */
