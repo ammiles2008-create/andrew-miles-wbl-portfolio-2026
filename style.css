@@ -10,11 +10,11 @@
 .topnav a {
     color: #f2f2f2;
     text-align: right;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
-    font-size: 5vw;
+    font-size: 2vw;
     background-color: rgb(134, 173, 224);
-    font-family: helvetica;
+    font-family: Helvetica;
 }
 
 /* Code for when the mouse hover over an unselected navigation panel */
@@ -28,6 +28,11 @@
     background-color: steelblue;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Code for the leftmost button of the current page */
+.leftmost{
+    margin-left: 4vw;
 }
 /* Navigation Bar styling based on (but edited) from the original template from https://www.w3schools.com/howto/howto_js_topnav.asp */
 
@@ -120,6 +125,12 @@ ol{
 /* Code to implement the home page animation*/
 #home-page-title{
     animation: home-page-title-animation 3s forwards;
+}
+
+/* Home Page body Styling */
+
+.body-margin{
+    margin: 4vw;
 }
 
 /*------------------------ End of Home Page Styling Rules ----------------------------------------*/
