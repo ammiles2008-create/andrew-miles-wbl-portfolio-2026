@@ -50,7 +50,7 @@ body {
 /* Code for the largest header(s) of the webpage */
 h1 {
     text-align: center;
-    font-size: 6vw;
+    font-size: 4vw;
     font-family: Courier;
 }
 
@@ -61,7 +61,7 @@ h1 {
 /* Code for the second largest header(s) of the webpage */
 h2{
     text-align: center;
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-decoration: underline;
 }
 
@@ -83,11 +83,16 @@ ol{
 
 /* Home Page Picture Styling */
 
+/* Shared code for the home page picture and caption */
+.andrew-pic-figure{
+    display: block;
+    width: 30%;
+    float: right;
+    margin-left: 4vw;
+}
+
 /* Code for the home page picture itself*/
 #andrew-pic{
-    display: block;
-    margin: auto;
-    width: 50%;
     border-style: dotted;
     border-color: gray;
 }
@@ -95,30 +100,37 @@ ol{
 /* Code for the home page picture caption*/
 #andrew-pic-description{
     text-align: left;
-    font-size: 2vw;
+    font-size: 1.5vw;
     display: block;
-    margin: auto;
-    width: 50%;
+}
+
+/* Home Page Title Styling */
+
+/* Code for the home page title animation */
+@keyframes home-page-title-animation{
+    from{
+        font-size: 0vw;
+    }
+    to{
+        font-size: 4vw;
+    }
+}
+
+/* Code to implement the home page animation*/
+#home-page-title{
+    animation: home-page-title-animation 3s forwards;
 }
 
 /*------------------------ End of Home Page Styling Rules ----------------------------------------*/
 
 
 
-/*------------------------ Beginning of Home Page Styling Rules ----------------------------------------*/
+/*------------------------ Beginning of Project 1 Page Styling Rules ----------------------------------------*/
 
 /* Project 1 Heading Styling*/
 
-.small{
-    margin-bottom: 1vw;
-    font-size: 4vw;
-}
 
-.large{
-    margin-top : 1vw;
-}
-
-/*------------------------ End of Home Page Styling Rules ----------------------------------------*/
+/*------------------------ End of Project 1 Page Styling Rules ----------------------------------------*/
 
 
 
