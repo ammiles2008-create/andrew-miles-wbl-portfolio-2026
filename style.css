@@ -86,9 +86,9 @@ ol{
 /* Shared code for the home page picture and caption */
 .andrew-pic-figure{
     display: block;
-    width: 30vw;
+    max-width: 30vw;
     float: right;
-    margin-left: 4vw;
+    margin: 4vw;
 }
 
 /* Code for the home page picture itself*/
