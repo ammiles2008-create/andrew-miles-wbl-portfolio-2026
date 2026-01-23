@@ -94,6 +94,7 @@ ol{
 /* Code for the home page picture itself*/
 #andrew-pic{
     border-style: dotted;
+    max-width: 30vw;
     border-color: gray;
 }
 
