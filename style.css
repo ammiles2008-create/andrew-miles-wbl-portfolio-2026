@@ -29,11 +29,6 @@
     color: white;
     font-family:Arial, Helvetica, sans-serif;
 }
-
-/* Code for the leftmost button of the current page */
-.leftmost{
-    margin-left: 4vw;
-}
 /* Navigation Bar styling based on (but edited) from the original template from https://www.w3schools.com/howto/howto_js_topnav.asp */
 
 
