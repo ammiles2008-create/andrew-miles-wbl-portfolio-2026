@@ -7,12 +7,24 @@
 /* Top Navigation Bar Styling */
 
 /* Code for an unselected navigation panel */
+.topnav{
+    /* Flex Properties */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    gap: 1vw;
+}
+
 .topnav a {
     color: #f2f2f2;
     text-align: right;
     padding: 10px 12px;
     text-decoration: none;
     font-size: 2vw;
+    padding: 2vw;
+    border-radius: 0.5rem;
     background-color: rgb(134, 173, 224);
     font-family: Helvetica;
 }
@@ -24,7 +36,7 @@
 }
 
 /* Code for the button of the current page */
-.topnav a.active{
+#active{
     background-color: steelblue;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
