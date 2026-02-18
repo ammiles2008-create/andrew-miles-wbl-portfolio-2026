@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     margin-top: 2vh;
     gap: 1vw;
+    margin-bottom: 1vh;
 }
 
 .topnav a {
@@ -50,9 +51,9 @@
 /* Code for the entire body of the webpage */
 body {
     background-color:aliceblue;
-    font-family: Helvetica;
     text-align: left;
     font-size: 1.5vw;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -63,7 +64,13 @@ body {
 h1 {
     text-align: center;
     font-size: 4vw;
-    font-family: Courier;
+    font-family: "Goldman", sans-serif;
+    background-color: steelblue;
+    color: white;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 
@@ -86,6 +93,13 @@ ol{
     font-size: 1.5vw;
 }
 
+/* Paragraph Styling */
+
+/* code for the paragraphs of the webpage */
+p{
+    margin: 3vw;
+}
+
 /*------------------------ End of General Styling Rules ----------------------------------------*/
 
 
@@ -96,7 +110,7 @@ ol{
 /* Home Page Picture Styling */
 
 /* Shared code for the home page picture and caption */
-.andrew-pic-figure{
+.andrew_pic_figure{
     display: block;
     max-width: 30vw;
     float: right;
@@ -104,14 +118,14 @@ ol{
 }
 
 /* Code for the home page picture itself*/
-#andrew-pic{
+#andrew_pic{
     border-style: dotted;
     max-width: 30vw;
     border-color: gray;
 }
 
 /* Code for the home page picture caption*/
-#andrew-pic-description{
+#andrew_pic_description{
     text-align: left;
     font-size: 1.5vw;
     display: block;
@@ -130,14 +144,8 @@ ol{
 }
 
 /* Code to implement the home page animation*/
-#home-page-title{
+#home_page_title{
     animation: home-page-title-animation 3s forwards;
-}
-
-/* Home Page body Styling */
-
-.body-margin{
-    margin: 4vw;
 }
 
 /*------------------------ End of Home Page Styling Rules ----------------------------------------*/
@@ -148,7 +156,27 @@ ol{
 
 /* Project 1 Heading Styling*/
 
+#project1_title{
+    font-size: 0vw;
+}
 
+#start{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 2vw;
+    padding: 2vw;
+    border-radius: 0.5rem;
+    background-color: rgb(134, 173, 224);
+    font-family: "Roboto", sans-serif;
+}
+
+#start_parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*------------------------ End of Project 1 Page Styling Rules ----------------------------------------*/
 
 
