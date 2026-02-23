@@ -177,6 +177,44 @@ p{
     justify-content: center;
     align-items: center;
 }
+
+#container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#container div{
+    height:50px;
+    width:50px;
+    border: 1px solid black;
+    position:relative;
+    background-color: white;
+}
+
+#start
+{
+    margin:5px;
+    padding:10px;
+    font-size:15px;
+    font-family: creepster, sans-serif;
+}
+
+#topL{
+    background-color: white;
+}
+
+#topR{
+    background-color: white;
+}
+
+#bottomL{
+    background-color: white;
+}
+
+#bottomR{
+    background-color: white;
+}
+
 /*------------------------ End of Project 1 Page Styling Rules ----------------------------------------*/
 
 

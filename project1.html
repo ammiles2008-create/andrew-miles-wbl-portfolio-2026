@@ -12,6 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
+          integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+          crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Selection Bar -->
@@ -23,20 +26,271 @@
         <!-- Header -->
         <header>
             <br>
-            <h1 id = "project1_title" style = "font-size: 0vw;">Project 1: Portfolio Website</h1>
+            <h1 id = "project1_title" style = "font-size: 0vw;">Project 1: Learning Implementation</h1>
             <h2>Introduction</h2>
             <div>
-                <p> Over the past few weeks, I have learned how to implement HTML, CSS, Javascript, and jQuery (a Javascript library that makes it easier to code in Javascript) to make this portfolio website. Below, I will share the learning processes I went through and some of the cool new things I learned how to make.  Let's get into it! To start, click the button below:</p>
+                <p> Over the past few weeks, I have learned how to implement HTML, CSS, Javascript, and jQuery (a Javascript library that makes it easier to code in Javascript) to make this portfolio website. Below, I will share the learning processes I went through to make this Whac-A-Mole game. To play, press the start button and click the boxes when they light up to score points before time runs out.</p>            </div>
+            <div id = container>
+                <div id = "topL"></div>
+                <div id = "topM"></div>
+                <div id = "topR"></div>
             </div>
-            <div id = "start_parent">
-                <button id = "start"> Press Me!</button>
+            <div id = container>
+                <div id = "middleL"></div>
+                <div id = "middleM"></div>
+                <div id = "middleR"></div>
             </div>
+            <div id = container>
+                <div id = "bottomL"></div>
+                <div id = "bottomM"></div>
+                <div id = "bottomR"></div>
+            </div>
+            <button id = "start">Start</button>
+            <p id = "score"></p>
+            <p id = "countdown"></p>
+            <p>I first learned how to make the base HTML elements for the website pages.</p>
         </header>
         
         <script>
             $("#project1_title").animate({fontSize: "4vw"}, 3000);
-            $("#start").click(function(){
-                $("#start_parent").append("<p>it worked!</p>");
+
+
+
+            var isRed = false;
+            var score = 0;
+            var intervalId = null;
+            $("#start").click(whacamole);
+            
+            function whacamole(){
+                $("#start").css("visibility", "hidden");
+                $("#score").text("Score:");
+                intervalId = setInterval(decide, 3000);
+                countDown();
+            }
+            
+            function decide(){
+                var randNum = Math.floor((Math.random() * 9) + 1);
+                console.log(randNum);
+                if (randNum == 1)
+                {
+                    $("#topL").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 2)
+                {
+                    $("#topR").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 3)
+                {
+                    $("#bottomL").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 4)
+                {
+                    $("#bottomR").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 5)
+                {
+                    $("#topM").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 6)
+                {
+                    $("#middleL").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 7)
+                {
+                    $("#middleM").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 8)
+                {
+                    $("#middleR").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+                else if (randNum == 9)
+                {
+                    $("#bottomM").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
+                    animateRed(randNum);
+                }
+            }
+            
+            function animateRed(e){
+                if (e == 1){
+                    $("#topL").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#topL").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 2)
+                {
+                    $("#topR").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#topR").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 3)
+                {
+                    $("#bottomL").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#bottomL").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 4)
+                {
+                    $("#bottomR").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#bottomR").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 5)
+                {
+                    $("#topM").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#topM").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 6)
+                {
+                    $("#middleL").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#middleL").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 7)
+                {
+                    $("#middleM").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#middleM").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 8)
+                {
+                    $("#middleR").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#middleR").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+                else if (e == 9)
+                {
+                    $("#bottomM").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
+                        isRed = true;
+                    });
+                    $("#bottomM").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
+                        isRed = false;
+                    });
+                }
+
+            }
+            
+            function countDown() {
+                var timeLeft = 60;
+            
+                var timer = setInterval(function() {
+                    $("#countdown").text("Time Remaining: " + timeLeft);
+                    timeLeft--;
+            
+                    if (timeLeft < 0) {
+                        $("#countdown").text("Time's up!");
+                        clearInterval(timer);
+                        clearInterval(intervalId);
+                        $("#topL, #topM, #topR, #middleL, #middleM, #middleR, #bottomL, #bottomM, #bottomR").stop(true, true);
+                        $("#topL, #topM, #topR, #middleL, #middleM, #middleR, #bottomL, #bottomM, #bottomR").css("backgroundColor", "white");
+                        isRed = false;
+                    }
+                }, 1000);
+            }
+
+            
+            $("#topL").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#topM").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+            
+            $("#topR").click(function(){
+               if(isRed == true)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#middleL").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#middleM").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#middleR").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#bottomL").click(function(){
+                if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#bottomM").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
+            });
+
+            $("#bottomR").click(function(){
+               if(isRed)
+               {
+                    score++;
+                    $("#score").text("Score: " + score);
+               }
             });
         </script>
     </body>
