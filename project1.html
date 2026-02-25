@@ -29,26 +29,46 @@
             <h1 id = "project1_title" style = "font-size: 0vw;">Project 1: Learning Implementation</h1>
             <h2>Introduction</h2>
             <div>
-                <p> Over the past few weeks, I have learned how to implement HTML, CSS, Javascript, and jQuery (a Javascript library that makes it easier to code in Javascript) to make this portfolio website. Below, I will share the learning processes I went through to make this Whac-A-Mole game. To play, press the start button and click the boxes when they light up to score points before time runs out.</p>            </div>
-            <div id = container>
-                <div id = "topL"></div>
-                <div id = "topM"></div>
-                <div id = "topR"></div>
+                <p> Over the past few weeks, I have learned how to implement HTML, CSS, Javascript, and jQuery (a Javascript library that makes it easier to code in Javascript) to make this portfolio website. Below, I will share the learning processes I went through to make this Whac-A-Mole game. To play, press the start button and click the moles when they pop up to score points before time runs out.</p>            </div>
+            <div class = container id = "topContainer">
+                <div>
+                    <div id = "topL"></div>
+                </div>
+                <div>
+                    <div id = "topM"></div>
+                </div>
+                <div>
+                    <div id = "topR"></div>
+                </div>
             </div>
-            <div id = container>
-                <div id = "middleL"></div>
-                <div id = "middleM"></div>
-                <div id = "middleR"></div>
+            <div class = container id = "middleContainer">
+                <div>
+                    <div id = "middleL"></div>
+                </div>
+                <div>
+                    <div id = "middleM"></div>
+                </div>
+                <div>
+                    <div id = "middleR"></div>
+                </div>
             </div>
-            <div id = container>
-                <div id = "bottomL"></div>
-                <div id = "bottomM"></div>
-                <div id = "bottomR"></div>
+            <div class = container id = "bottomContainer">
+                <div>
+                    <div id = "bottomL"></div>
+                </div>
+                <div>
+                    <div id = "bottomM"></div>
+                </div>
+                <div>
+                    <div id = "bottomR"></div>
+                </div>
             </div>
             <button id = "start">Start</button>
             <p id = "score"></p>
             <p id = "countdown"></p>
-            <p>I first learned how to make the base HTML elements for the website pages.</p>
+            <br>
+            <h2>Description</h2>
+            <p>I first learned how to make the basic HTML elements for the website pages. HTML is effectively the "skeleton" for the website that codes for the elements of the website itself like the headers and paragraphs but doesn't style them.</p>
         </header>
         
         <script>
@@ -62,8 +82,8 @@
             $("#start").click(whacamole);
             
             function whacamole(){
-                $("#start").css("visibility", "hidden");
                 $("#score").text("Score:");
+                $("#start").css("visibility", "hidden");
                 intervalId = setInterval(decide, 3000);
                 countDown();
             }
@@ -120,82 +140,82 @@
             
             function animateOpacity(e){
                 if (e == 1){
-                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 2)
                 {
-                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 3)
                 {
-                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 4)
                 {
-                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 5)
                 {
-                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 6)
                 {
-                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 7)
                 {
-                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 8)
                 {
-                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
                 else if (e == 9)
                 {
-                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 100}, "fast", function(){
                         isVisible = true;
                     });
-                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({opacity: 0}, "fast", function(){
                         isVisible = false;
                     });
                 }
@@ -216,6 +236,7 @@
                         $("#topL, #topM, #topR, #middleL, #middleM, #middleR, #bottomL, #bottomM, #bottomR").stop(true, true);
                         $("#topL, #topM, #topR, #middleL, #middleM, #middleR, #bottomL, #bottomM, #bottomR").css("backgroundColor", "white");
                         isVisible = false;
+                        $("#start").css("visibility", "visible");
                     }
                     else if (timeLeft < 15)
                     {

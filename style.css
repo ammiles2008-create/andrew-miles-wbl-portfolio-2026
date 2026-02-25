@@ -178,18 +178,52 @@ p{
     align-items: center;
 }
 
-#container{
+.container{
     display:flex;
     align-items:center;
     justify-content:center;
+    background-color: burlywood;
+    margin-left: 30vw;
+    margin-right: 30vw;
 }
 
-#container div{
+#topContainer
+{
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    padding-top: 1vw;
+}
+
+#middleContainer
+{
+    border-radius: 0vw;
+}
+
+#bottomContainer
+{
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    padding-bottom: 1vw;
+}
+
+.container div{
     height:10vw;
     width:10vw;
-    border: 1px solid black;
+    position:relative;
+    background-color: black;
+    border-radius: 25vw;
+    margin: 1vw;
+}
+
+.container div div{
+    height:10vw;
+    width:10vw;
     position:relative;
     background-color: white;
+    background-image: url("mole.jpg");
+    background-size: 10vw, 10vw;
+    opacity: 0;
+    margin: 0vw;
 }
 
 #start
@@ -197,7 +231,25 @@ p{
     margin: 2vw;
     padding: 2vw;
     font-size: 2vw;
-    font-family: creepster, sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left: 42.5vw;
+    margin-right: 42.5vw;
+}
+
+#score
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+#countdown
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
 }
 
 /*------------------------ End of Project 1 Page Styling Rules ----------------------------------------*/
