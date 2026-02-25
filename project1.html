@@ -55,8 +55,8 @@
             $("#project1_title").animate({fontSize: "4vw"}, 3000);
 
 
-
-            var isRed = false;
+            var speedModifer = 4;
+            var isVisible = false;
             var score = 0;
             var intervalId = null;
             $("#start").click(whacamole);
@@ -73,130 +73,130 @@
                 console.log(randNum);
                 if (randNum == 1)
                 {
-                    $("#topL").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 2)
                 {
-                    $("#topR").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 3)
                 {
-                    $("#bottomL").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 4)
                 {
-                    $("#bottomR").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 5)
                 {
-                    $("#topM").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 6)
                 {
-                    $("#middleL").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 7)
                 {
-                    $("#middleM").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 8)
                 {
-                    $("#middleR").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
                 else if (randNum == 9)
                 {
-                    $("#bottomM").delay(Math.floor(((Math.random() * 4) + 1) * 1000));
-                    animateRed(randNum);
+                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 1000));
+                    animateOpacity(randNum);
                 }
             }
             
-            function animateRed(e){
+            function animateOpacity(e){
                 if (e == 1){
-                    $("#topL").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#topL").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#topL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 2)
                 {
-                    $("#topR").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#topR").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#topR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 3)
                 {
-                    $("#bottomL").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#bottomL").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#bottomL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 4)
                 {
-                    $("#bottomR").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#bottomR").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#bottomR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 5)
                 {
-                    $("#topM").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#topM").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#topM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 6)
                 {
-                    $("#middleL").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#middleL").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#middleL").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 7)
                 {
-                    $("#middleM").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#middleM").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#middleM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 8)
                 {
-                    $("#middleR").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#middleR").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#middleR").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
                 else if (e == 9)
                 {
-                    $("#bottomM").delay(1000).animate({backgroundColor: "red"}, "fast", function(){
-                        isRed = true;
+                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "red"}, "fast", function(){
+                        isVisible = true;
                     });
-                    $("#bottomM").delay(1000).animate({backgroundColor: "white"}, "fast", function(){
-                        isRed = false;
+                    $("#bottomM").delay(Math.floor(((Math.random() * speedModifer) + 1) * 200)).animate({backgroundColor: "white"}, "fast", function(){
+                        isVisible = false;
                     });
                 }
 
@@ -215,14 +215,26 @@
                         clearInterval(intervalId);
                         $("#topL, #topM, #topR, #middleL, #middleM, #middleR, #bottomL, #bottomM, #bottomR").stop(true, true);
                         $("#topL, #topM, #topR, #middleL, #middleM, #middleR, #bottomL, #bottomM, #bottomR").css("backgroundColor", "white");
-                        isRed = false;
+                        isVisible = false;
+                    }
+                    else if (timeLeft < 15)
+                    {
+                        speedModifer = 1;
+                    }
+                    else if (timeLeft < 30)
+                    {
+                        speedModifer = 2;
+                    }
+                    else if (timeLeft < 45)
+                    {
+                        speedModifer = 3;
                     }
                 }, 1000);
             }
 
             
             $("#topL").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -230,7 +242,7 @@
             });
 
             $("#topM").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -238,7 +250,7 @@
             });
             
             $("#topR").click(function(){
-               if(isRed == true)
+               if(isVisible == true)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -246,7 +258,7 @@
             });
 
             $("#middleL").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -254,7 +266,7 @@
             });
 
             $("#middleM").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -262,7 +274,7 @@
             });
 
             $("#middleR").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -270,7 +282,7 @@
             });
 
             $("#bottomL").click(function(){
-                if(isRed)
+                if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -278,7 +290,7 @@
             });
 
             $("#bottomM").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
@@ -286,7 +298,7 @@
             });
 
             $("#bottomR").click(function(){
-               if(isRed)
+               if(isVisible)
                {
                     score++;
                     $("#score").text("Score: " + score);
