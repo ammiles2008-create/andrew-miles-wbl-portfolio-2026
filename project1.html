@@ -83,8 +83,9 @@
             $("#start").click(whacamole);
             
             function whacamole(){
-                $("#score").text("Score:");
+                $("#score").text("Score: 0");
                 $("#start").css("visibility", "hidden");
+                score = 0;
                 intervalId = setInterval(decide, 3000);
                 countDown();
             }
