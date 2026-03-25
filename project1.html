@@ -21,6 +21,7 @@
         <div class = "topnav">
             <div><a href = "index.html">Home</a></div>
             <div><a id = "active">Project 1</a></div>
+            <div><a href = "project2.html">Project 2</a></div>
         </div>
 
         <!-- Header -->
@@ -76,7 +77,14 @@
         
         <script>
             $("#project1_title").animate({fontSize: "4vw"}, 3000);
-
+            $("button").hover(function(){
+                $(this).css("background-color", "#ddd");
+                $(this).css("color", "black");
+            }, function(){
+                $(this).css("background-color", "rgb(134, 173, 224)");
+                $(this).css("color", "white");
+                $(this).css("cursor", "pointer");
+            });
 
             var speedModifer = 4;
             var isVisible = false;

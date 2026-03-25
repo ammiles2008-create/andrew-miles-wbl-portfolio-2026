@@ -170,6 +170,7 @@ p{
     border-radius: 0.5rem;
     background-color: rgb(134, 173, 224);
     font-family: "Roboto", sans-serif;
+    border-width: 0;
 }
 
 #start_parent{
@@ -236,8 +237,8 @@ p{
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-left: 43.5vw;
-    margin-right: 42.5vw;
+    margin-left: 42vw;
+    margin-right: 42vw;
 }
 
 #score
@@ -249,6 +250,12 @@ p{
 
 #countdown
 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+#versus{
     text-align: center;
     font-weight: bold;
     font-size: 2vw;
