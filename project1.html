@@ -85,6 +85,12 @@
                 $(this).css("color", "white");
                 $(this).css("cursor", "pointer");
             });
+            $("#topContainer").hover(function(){
+                $(this).css("cursor", "url('hammer.png'), auto");
+            }, function(){
+                $(this).css("cursor", "default");
+            });
+
 
             var speedModifer = 4;
             var isVisible = false;

@@ -152,7 +152,7 @@ p{
 
 
 
-/*------------------------ Beginning of Project 1 Page Styling Rules ----------------------------------------*/
+/*------------------------ Beginning of Project 1 & Project 2 Page Styling Rules ----------------------------------------*/
 
 /* Project 1 Heading Styling*/
 
@@ -261,7 +261,12 @@ p{
     font-size: 2vw;
 }
 
-/*------------------------ End of Project 1 Page Styling Rules ----------------------------------------*/
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+/*------------------------ End of Project 1 & Project 2 Page Styling Rules ----------------------------------------*/
 
 
 

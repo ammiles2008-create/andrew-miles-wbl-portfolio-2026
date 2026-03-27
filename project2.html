@@ -33,26 +33,24 @@
                 <p>Building on my previous skills from this portfolio website, I created a new website with a more practical application. Specifically, I designed a responsive website for Mountain Vista High School's Interact Club from scratch. This club prioritizes community service opportunities that I highlighted by including links to their sign ups. As the website coordinator for this club, I already have a preexisting website I made using Google Sites but this new website is built directly with HTML and CSS. As a result, it may look more rudimentary as I had to construct it without the aid of Google Sites's more visual approach. Although it sounds superior, Google Sites did not allow me to add the Google Docs iframes like in my custom site making it easier for the user to see who is signed up for different events on the custom website. Below I have linked both sites so you can compare and constrast them: </p>
             </div>
 
-            <button id = "start">Google Sites</button>
+            <button id = "start"><a href = "https://sites.google.com/view/interactclubmvhs/home">Google Sites</a></button>
             <p id = "versus">vs.</p>
-            <button id = "start">Custom Website</button>
+            <button id = "start"><a href = "https://ammiles2008-create.github.io/WBLInteractClubWebsiteTest/">Custom Website</a></button>
             <br>
             <h2>Description</h2>
-            <p>I first learned how to make the basic Hypertext Markup Language (HTML) elements for the website pages. HTML is effectively the "skeleton" for the website that codes for the elements of the website itself like the headers and paragraphs but doesn't style them. This makes most of the HTML elements look bland but overall create the core functionality of the website. For example, the title of this webpage, the navigation bar, the Whac-A-Mole game’s shapes, and the text you are reading right now were all created by me using HTML.</p>
-            <p>To make the text and the graphics look visually appealing, I had to apply a Cascading Style Sheets (CSS) layer on top of the HTML. I could have theoretically done all of the styling within the HTML, but that would have been too tedious and it wouldn’t have let me apply styles to all of the same elements on the page so I opted to use CSS instead. CSS only focuses on styling the HTML so it can style all of the HTML elements on a page, some HTML elements with a specific tag or class, or any combination of those methods. I used this CSS to create the light blue background for this page, the curvature and background colors for the buttons and the Whac-A-Mole game, and the different font colors for the titles and my body text (this text). I was also able to use CSS to make navigation bar interactions and the title animations so the user can switch between the pages and to stylize the pages further with growing titles.</p>
-            <p>Although useful, the CSS interactions and animations are harder to code and less customizable than their Javascript counterparts so I also learned how to use Javascript to make my pages more responsive. I already have a strong background knowledge of Java from my AP Computer Science A course last year so Javascript was relatively easy to learn as it uses the same logic structure although the specific commands to access the HTML and CSS were hard to memorize and implement in this coding language. As a solution, I learned how to use JQuery, a Java library, which helped me simplify the coding commands for Javascript without sacrificing the logic system I already understood. I was then able to use this combination of Javascript and JQuery to make the Whac-A-Mole game function properly and develop the complex animations for this game.</p>
-            <p>In all, I learned how to use HTML, CSS, Javascript, and JQuery to build this originally bland white background into a stylized, interactive, and fun website accessible from anywhere (with the Internet).</p>
+            <p>It took me longer than expected to make the custom website because I had to learn how to add an image to the navigation bar without affecting other elements for each seperate page. The home page was also hard to format as I had to figure out how to add two images between the title and center some but not all of the elements. Nonetheless, it was a great learning experience and I am statisfied with the outcome. Although the custom website looks a little less complicated than the Google Sites website, I think this simple design makes it easier to navigate to not overwhelm the user. I also enjoy how this custom website allows me to include Google Docs iFrames on the Sign Ups page which was absent from the original website.</p>
+            <p>For this project, I specifically had to do a lot of extra research to figure out the formatting and ended up tweaking the seperate elements on the page  about 20 times. I eventually had to scrap  a section of the home page because it would look fine in my preview in VSCode but would have wrapping problems when deployed. My decision to abandon this section actually helped make the home page less cluttered so I am ultimately glad I made this decision.</p>
+            <p>Overall, I am satisfied with how my custom website turned out and feel it is an accurate demonstration of my acquired skills. In the future, I plan to continue to practice these skills by creating more custom websites based on aspects I like and can repurpose from other websites. For now, I am moving on to learn how to incoporporate databases into websites. I then plan to incoporate these databases into my Interact Club Custom Websites to make built-in sign ups.</p>
         </header>
         
         <script>
             $("#project1_title").animate({fontSize: "4vw"}, 3000);
-            $("button").hover(function(){
-                $(this).css("background-color", "#ddd");
-                $(this).css("color", "black");
+            $("a").hover(function(){
+                $(this).parent().css("background-color", "#ddd");
+                $(this).parent().css("color", "black");
             }, function(){
-                $(this).css("background-color", "rgb(134, 173, 224)");
-                $(this).css("color", "white");
-                $(this).css("cursor", "pointer");
+                $(this).parent().css("background-color", "rgb(134, 173, 224)");
+                $(this).parent().css("color", "white");
             });
             
         </script>
