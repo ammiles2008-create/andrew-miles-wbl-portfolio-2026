@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 1</title>
+        <link rel="stylesheet" href="style.css">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
+          integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+          crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Selection Bar -->
+        <div class = "topnav">
+            <div><a href = "index.html">Home</a></div>
+            <div><a href = "project1.html">Project 1</a></div>
+            <div><a id = "active">Project 2</a></div>
+            <div><a href = "project3.html">Project 3</a></div>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <br>
+            <h1 id = "project1_title" style = "font-size: 0vw;">Project 3: Data Collection Application</h1>
+            <h2>Introduction</h2>
+            <div>
+                <p>After I finished my Interact Club website as detailed in Project 2, I realized the user could not directly edit the Google Docs sign up sheet from the website. After finding this limitation, I learned how to collect data directly from the website on CodeHS using JavaScript and jQuery. This led me to my second implementation you can access below by going to the custom Interact Club website, going to the the Event Sign Ups page, and scrolling down the section titled "Built-In Sign Up Implementation:"</p>
+            </div>
+
+            <button id = "start"><a href = "https://ammiles2008-create.github.io/WBLInteractClubWebsiteTest/">Custom Website</a></button>
+            <br>
+            <h2>Description</h2>
+            <p>To start, I went back to the CodeHS course where I had originally completed some sections for Project 1 and learned how to collect information from the user through a website, manipulate it, and store it. The course specifcally taught me how to save this information to the computer's local storage and the cloud. For the project itself, I decided to collect data using built-in Google prompt commands for ease of use and save this data to local storage where it would be saved on the user's device if they refreshed the page.</p>
+            <p>You may be wondering why I decided to use local storage instead of cloud storage since local storage doesn't save data to other computers. Well, this implementation is meant to show the capabilities of the website and give a basic framework for understanding how data can be collected and stored. Cloud storage is a much harder concept to implement and requires access to potientally expensive cloud services and APIs and an understanding of other coding languages compared to local storage which I can easily access through JavaScript commands. In the future if desired, I can simply edit the already existing code to work with cloud storage if desired but for now, local storage is an adequate demonstration I could implement in the short time I have left in this course.</p>
+            <p>Overall, I am satisfied with the ability of my page to collect, manipulate, and store user data to emulate a sign up for the Interact Club website. Although it cannot connect to the cloud, it serves its purpose to demonstrate how a built-in sign up to a website would work for Interact Club compared to a third party service like Google Docs. I am now confident in my abilities to collect, store, and manipulate data and am excited to learn more about the topic in the future.</p>
+        </header>
+        
+        <script>
+            $("#project1_title").animate({fontSize: "4vw"}, 3000);
+            $("a").hover(function(){
+                $(this).parent().css("background-color", "#ddd");
+                $(this).parent().css("color", "black");
+            }, function(){
+                $(this).parent().css("background-color", "rgb(134, 173, 224)");
+                $(this).parent().css("color", "white");
+            });
+            
+        </script>
+    </body>
+</html>
